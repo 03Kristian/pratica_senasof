@@ -14,21 +14,24 @@ blade es un motor de plantillas simple  -->
         <button type="button" class="btn btn-outline-primary" onclick="windows.location">
             guia
         </button>
-        <table class="table table-dark table-responsive table-overflow">
+        <table class="table table-dark table-responsive table-hover">
+            <thead class="">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">documentacion</th>
                 <th scope="col">tipo</th>
+                <th scope="col">Acciones</th>
+                <th></th>
 
             </tr>
-
-
+            </thead>
+            <tbody>@foreach ($registros as $registro)
             <tr>
-                @foreach ($registro22 as $registro)
+
                 <td>{{$registro->id}}</td>
                 <td>{{$registro->numerodocumento}}</td>
                 <td>{{$registro->tipo}}</td>
-                @endforeach
+
                 <td>
                     {{-- <button class="btn btn-warning" >editar</button> --}}
                     <a href="registrar/{{$registro->id}}/edit" class="btn btn-warning">Editar</a>
@@ -43,8 +46,9 @@ blade es un motor de plantillas simple  -->
 
                     </form>
                 </td>
-            </tr>
 
+            </tr>@endforeach
+        </tbody>
         </table>
     </div>
 

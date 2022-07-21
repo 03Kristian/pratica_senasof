@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-    <form action="/registrar" method="POST">
+    <form action="/registrar/{{$registro->id}}" method="post">
         @csrf
         @method ('PUT')
     <div class="mb-3">
@@ -17,5 +17,8 @@
     </div>
 
     <button type="submit" class="btn btn-primary">enviar</button>
+
+    </form>
+    <a href="/registrar"><button class="btn btn-primary">Volver</button></a>
 </div>
 @endsection

@@ -15,7 +15,7 @@ class RegistroController extends Controller
     public function index()
     {
         $registros = Registro::all();
-        return view('registro.index')->with('registro22', $registros);
+        return view('registro.index')->with('registros', $registros);
     }
 
     /**
@@ -38,9 +38,9 @@ class RegistroController extends Controller
     {
             $registro = new Registro();
             $registro->numerodocumento = $request->numerodocumento;
-            $registo->tipo = "aaaaa";
+            $registro->tipo = $request->tipo;
 
-            $registo->save();
+            $registro->save();
              //return $registo;
             return redirect('/registrar');
     }
@@ -64,7 +64,7 @@ class RegistroController extends Controller
      */
     public function edit(Registro $registro, $id)
     {
-        $registo= Registro::find($id);
+        $registro= Registro::find($id);
         return view("registro/edit")->with('registro',$registro);
     }
 
@@ -75,9 +75,14 @@ class RegistroController extends Controller
      * @param  \App\Models\Registro  $registro
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Registro $registro)
+    public function update(Request $request,$id)
     {
-        //
+        $registro =Registro::find($id);
+            $registro->numerodocumento = $request->numerodocumento;
+            $registro->tipo = $request->tipo;
+            $registro->save();
+
+            return redirect('/registrar');
     }
 
     /**

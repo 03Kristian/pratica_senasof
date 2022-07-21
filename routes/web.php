@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistroController;
+use App\Http\Controllers\EmpleadoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // utilizamos el metodo mas completo: resource;
 Route::resource('registrar', RegistroController::class);
+// crud empleados
+Route::resource('empleado',EmpleadoController::class);
