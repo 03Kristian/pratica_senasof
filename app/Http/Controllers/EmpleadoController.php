@@ -35,7 +35,9 @@ class EmpleadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $empleados = new Empleados;
+        $empleados->nombre= $request->nombre;
+        $empleados->
     }
 
     /**

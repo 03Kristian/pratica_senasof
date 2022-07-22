@@ -9,9 +9,9 @@ blade es un motor de plantillas simple  -->
     {{-- <h1>Lista</h1> --}}
     <div class="container-sm">
 
-        <a href="/registrar/create">crear</a>
+        <a href="/registrar/create" class="btn btn-info">crear</a>
 
-        <button type="button" class="btn btn-outline-primary" onclick="windows.location">
+        <button type="button" class="btn btn-primary" onclick="windows.location">
             guia
         </button>
         <table class="table table-dark table-responsive table-hover">

@@ -17,10 +17,10 @@
     </div>
 
     <button type="submit" class="btn btn-primary">enviar</button>
-    {{-- <input type="submit" value="enviar" name"btn-enviar"> --}}
+    <!-- {{-- <input type="submit" value="enviar" name"btn-enviar"> --}} -->
     </form>
 
-    <a href="/registrar"><button type="submit" class="btn btn-primary" >volver</button>
+    <a href="/registrar"><button type="submit" class="mt-4 btn btn-primary" >volver</button>
 </a>
 
 </div>

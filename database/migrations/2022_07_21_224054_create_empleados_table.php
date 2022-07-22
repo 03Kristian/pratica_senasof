@@ -15,6 +15,9 @@ class CreateEmpleadosTable extends Migration
     {
         Schema::create('empleados', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->enum('tipo',['CC','TI','CE']);
+            $table->string('numerodocumento',20);
             $table->timestamps();
         });
     }
