@@ -4,6 +4,7 @@
 
     <div class="container">
     <form action="" method="post">
+        @csrf
         <div class="mb-3">
             <label for="" class="form-label">Nombre</label>
             <input type="text" name="nombre" id="nombre" class="form-control" placeholder="" >

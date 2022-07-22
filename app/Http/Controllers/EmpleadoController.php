@@ -35,9 +35,12 @@ class EmpleadoController extends Controller
      */
     public function store(Request $request)
     {
-        $empleados = new Empleados;
+        $empleados = new Empleado;
         $empleados->nombre= $request->nombre;
-        $empleados->
+        $empleados->tipo = $request->tipo;
+        $empleados->numerodocumento = $request->numerodocumento;
+        $empleados->save();
+        return redirect('\empleado\create');
     }
 
     /**
